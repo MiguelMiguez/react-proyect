@@ -1,0 +1,12 @@
+.ImageCard{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ImageCard .ImageProduct{
+    width: 300px;
+    height: auto;
+}

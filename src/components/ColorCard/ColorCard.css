@@ -1,0 +1,30 @@
+.ColorCard{
+
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ColorCard .color1{
+    width: 50px;
+    border-radius: 100%;
+    background-color: blue;
+
+}
+
+.ColorCard .color2{
+    width: 50px;
+    border-radius: 100%;
+    background-color: red;
+
+}
+
+.ColorCard .color3{
+    width: 50px;
+    border-radius: 100%;
+    background-color: black;
+
+}
