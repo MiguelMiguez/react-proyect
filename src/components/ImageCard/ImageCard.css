@@ -6,7 +6,10 @@
     align-items: center;
 }
 
-.ImageCard .ImageProduct{
-    width: 300px;
+.ImageCard .ImgProduct{
+    border-radius: 20px;
+    width: 100%;
     height: auto;
+    box-shadow: 0px 0px 2px 0px #00000080;
+
 }

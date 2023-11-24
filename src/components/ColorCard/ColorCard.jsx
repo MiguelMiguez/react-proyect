@@ -5,9 +5,9 @@ import './ColorCard.css'
 const ColorCard = () => {
   return (
     <div className='ColorCard'>
-        <button className="color"></button>
-        <button className="color"></button>
-        <button className="color"></button>
+        <button className="color1"></button>
+        <button className="color2"></button>
+        <button className="color3"></button>
     </div>
   )
 }

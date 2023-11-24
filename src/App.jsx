@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import PrincipalScreen from './components/PrincipalScreen/PrincipalScreen';
+import ProductCard from './components/ProductCard/ProductCard';
 
 
 
@@ -10,6 +11,7 @@ function App() {
   return (
     <div>
         <PrincipalScreen/>
+        <ProductCard/>
     </div>
   )
 }

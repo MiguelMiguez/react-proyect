@@ -9,12 +9,12 @@
 
 .DescriptionCard .TittleProduct{
     font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+    font-weight: 600;
     text-align: center;
 }
 
 .DescriptionCard .InfoProduct{
     font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
+    font-weight: 400;
     text-align: center;
 }
