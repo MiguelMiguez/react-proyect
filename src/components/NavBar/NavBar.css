@@ -1,4 +1,14 @@
 .NavBar{
     width: 100%;
     height: auto;
+
+}
+
+.CartBuy{
+    width: 20px;
+    height: auto;
+}
+
+#num{
+    color: red;
 }
