@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import PrincipalScreen from './components/PrincipalScreen/PrincipalScreen';
-import ProductCard from './components/ProductCard/ProductCard';
+import SelectProducts from './components/SelectProducts/SelectProducts';
 
 
 
@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
         <PrincipalScreen/>
-        <ProductCard/>
+        <SelectProducts/>
     </div>
   )
 }
