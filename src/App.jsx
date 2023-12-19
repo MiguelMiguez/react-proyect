@@ -1,6 +1,9 @@
 import { useState } from 'react';
+import { BrowserRouter, Route , Routes } from 'react-router-dom';
 import PrincipalScreen from './components/PrincipalScreen/PrincipalScreen';
 import SelectProducts from './components/SelectProducts/SelectProducts';
+import MacPage from './components/MacPage/MacPage';
+
 
 
 
@@ -10,6 +13,12 @@ function App() {
 
   return (
     <div>
+      <BrowserRouter>
+        <Routes>
+            <Route path='/Home' element={<PrincipalScreen/>}/>
+            <Route path='/Mac' element={<MacPage/>}/>
+        </Routes>
+      </BrowserRouter>
         <PrincipalScreen/>
         <SelectProducts/>
     </div>
