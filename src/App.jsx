@@ -3,6 +3,7 @@ import { BrowserRouter, Route , Routes } from 'react-router-dom';
 import PrincipalScreen from './components/PrincipalScreen/PrincipalScreen';
 import SelectProducts from './components/SelectProducts/SelectProducts';
 import MacPage from './components/MacPage/MacPage';
+import NavBar from './components/NavBar/NavBar';
 
 
 
@@ -14,13 +15,13 @@ function App() {
   return (
     <div>
       <BrowserRouter>
+        <NavBar/>
         <Routes>
-            <Route path='/Home' element={<PrincipalScreen/>}/>
-            <Route path='/Mac' element={<MacPage/>}/>
+            <Route path='/' element={<PrincipalScreen/>}/>
+            <Route path='/mac' element={<MacPage/>}/>
+            <Route path='*' element={<PrincipalScreen/>}/> 
         </Routes>
       </BrowserRouter>
-        <PrincipalScreen/>
-        <SelectProducts/>
     </div>
   )
 }

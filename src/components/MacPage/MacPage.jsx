@@ -3,10 +3,11 @@ import TittleMac from '../TittleMac/TittleMac'
 import './MacPage.css';
 
 
+
 const MacPage = () => {
   return (
     <div>
-        <TittleMac></TittleMac>
+        <TittleMac/>
     </div>
   )
 }

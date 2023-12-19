@@ -1,5 +1,8 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import './NavBar.css'
+import MacPage from '../MacPage/MacPage';
+
 
 
 const NavBar = () => {
@@ -13,20 +16,25 @@ const NavBar = () => {
                 </button>
                 <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <li className='ListContainer'>
+                            <NavLink  to='/'> 
+                                Home
+                            </NavLink>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Phones</a>
+                        <li className='ListContainer'>
+                            <NavLink  to='/mac'> 
+                                Phones
+                            </NavLink>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Mac´s</a>
+                        <li className='ListContainer'>   
+                            <NavLink  to='/mac'> 
+                                Mac´s
+                            </NavLink>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Accesories</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" id='num' aria-current="page" href="#"><img className='CartBuy' src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="" /> 5 </a>
+                        <li className='ListContainer'>
+                            <NavLink  to='/mac'> 
+                                <img className='CartBuy' src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="" /> 
+                            </NavLink>
                         </li>
                     </ul>
                 </div>
