@@ -4,6 +4,7 @@ import PrincipalScreen from './components/PrincipalScreen/PrincipalScreen';
 import SelectProducts from './components/SelectProducts/SelectProducts';
 import MacPage from './components/MacPage/MacPage';
 import NavBar from './components/NavBar/NavBar';
+import PhonesPage from './components/PhonesPage/PhonesPage';
 
 
 
@@ -19,6 +20,7 @@ function App() {
         <Routes>
             <Route path='/' element={<PrincipalScreen/>}/>
             <Route path='/mac' element={<MacPage/>}/>
+            <Route path='/phones' element={<PhonesPage/>}/>
             <Route path='*' element={<PrincipalScreen/>}/> 
         </Routes>
       </BrowserRouter>
