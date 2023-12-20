@@ -4,11 +4,11 @@ import ButtonDown from '../ButtonDown/ButtonDown';
 import './PrincipalScreen.css';
 
 
-const PrincipalScreen = () => {
+const PrincipalScreen = ({ scrollToContainer }) => {
   return (
     <div className='PrincipalScreen'>
-        <PrincipalTittle/>
-        <ButtonDown/>    
+      <PrincipalTittle />
+      <ButtonDown scrollToContainer={scrollToContainer} />
     </div>
   )
 }

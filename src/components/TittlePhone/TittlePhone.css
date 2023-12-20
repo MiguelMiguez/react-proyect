@@ -1,0 +1,11 @@
+.TittlePhone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://t2.tudocdn.net/600901?w=1920);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: antiquewhite;
+    min-height: 50vh;
+}

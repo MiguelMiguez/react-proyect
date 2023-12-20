@@ -1,12 +1,10 @@
 import { useState } from 'react';
 import { BrowserRouter, Route , Routes } from 'react-router-dom';
-import PrincipalScreen from './components/PrincipalScreen/PrincipalScreen';
-import SelectProducts from './components/SelectProducts/SelectProducts';
 import MacPage from './components/MacPage/MacPage';
 import NavBar from './components/NavBar/NavBar';
 import PhonesPage from './components/PhonesPage/PhonesPage';
-
-
+import ContainerPs from './components/ContainerPs/ContainerPs';
+import Cart from './components/Cart/Cart';
 
 
 
@@ -18,10 +16,11 @@ function App() {
       <BrowserRouter>
         <NavBar/>
         <Routes>
-            <Route path='/' element={<PrincipalScreen/>}/>
+            <Route path='/' element={<ContainerPs/>}/>
             <Route path='/mac' element={<MacPage/>}/>
             <Route path='/phones' element={<PhonesPage/>}/>
-            <Route path='*' element={<PrincipalScreen/>}/> 
+            <Route path='/cart' element={<Cart/>}/>
+            <Route path='*' element={<ContainerPs/>}/> 
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,11 +1,11 @@
 import React from 'react'
 import './PriceCard.css'
 
-const PriceCard = () => {
+const PriceCard = ({price}) => {
   return (
     <div className='PriceCard'>
-        <p className='Price'>$200.000</p>
-        <button className='BtnAddCart'>Agregar al carrito</button>
+        <p className='Price'>{`$${price}`}</p>
+        <button className='BtnAddCart'>add to cart</button>
     </div>
   )
 }

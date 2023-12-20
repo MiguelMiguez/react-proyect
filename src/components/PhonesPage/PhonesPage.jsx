@@ -1,9 +1,14 @@
 import React from 'react'
 import './PhonesPage.css'
+import ContainerPhone from '../ContainerPhone/ContainerPhone'
+import TittlePhone from '../TittlePhone/TittlePhone'
 
 const PhonesPage = () => {
   return (
-    <div>PhonesPage</div>
+    <div>
+      <TittlePhone/>
+      <ContainerPhone/>
+    </div>
   )
 }
 

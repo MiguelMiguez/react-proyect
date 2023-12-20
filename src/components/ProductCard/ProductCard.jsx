@@ -7,13 +7,13 @@ import './ProductCard.css';
 
 
 
-const ProductCard = () => {
+const ProductCard = ({productData}) => {
+  const{image, name, price, description} = productData;
   return (
     <div className='ProductCard'>
-      <ImageCard/>
-      <DescriptionCard/>
-      <ColorCard/>
-      <PriceCard/>
+      <ImageCard image= {image}/>
+      <DescriptionCard name= {name} description={description} />
+      <PriceCard price={price}/>
     </div>
   )
 }
