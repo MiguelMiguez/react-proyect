@@ -1,0 +1,46 @@
+.Cart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.CartItem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    
+}
+
+.ImgItem{
+    width: 300px;
+    height: 300px;
+}
+
+p{
+    margin: 1rem;
+}
+
+.RemoveItemButton{
+    background-color: transparent;
+    border: none;
+}
+
+.ClearCartButton{
+    padding: 1rem;
+    background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	background-color:#7892c2;
+	border-radius:28px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}

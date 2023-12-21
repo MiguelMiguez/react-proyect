@@ -2,7 +2,7 @@ import React from 'react';
 import ProductCard from '../ProductCard/ProductCard';
 import './ContainerPhone.css';
 
-const ContainerPhone = React.forwardRef((props, ref) => {
+const ContainerPhone = React.forwardRef(({ addToCart }, ref) => {
   const products = [
     {
       id: 1,
@@ -33,7 +33,11 @@ const ContainerPhone = React.forwardRef((props, ref) => {
   return (
     <div ref={ref} className='ContainerPhone'>
       {products.map((product) => (
-        <ProductCard key={product.id} productData={product} />
+        <ProductCard
+          key={product.id}
+          productData={product}
+          addToCart={addToCart}
+        />
       ))}
     </div>
   );

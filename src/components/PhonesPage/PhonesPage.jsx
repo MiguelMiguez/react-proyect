@@ -1,15 +1,15 @@
-import React from 'react'
-import './PhonesPage.css'
-import ContainerPhone from '../ContainerPhone/ContainerPhone'
-import TittlePhone from '../TittlePhone/TittlePhone'
+import React from 'react';
+import './PhonesPage.css';
+import ContainerPhone from '../ContainerPhone/ContainerPhone';
+import TittlePhone from '../TittlePhone/TittlePhone';
 
-const PhonesPage = () => {
+const PhonesPage = ({ addToCart }) => {
   return (
     <div>
-      <TittlePhone/>
-      <ContainerPhone/>
+      <TittlePhone />
+      <ContainerPhone addToCart={addToCart} />
     </div>
-  )
-}
+  );
+};
 
-export default PhonesPage
+export default PhonesPage;
