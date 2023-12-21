@@ -28,6 +28,7 @@ const ContainerPhone = React.forwardRef(({ addToCart }, ref) => {
       price: 800,
       description: '128Gb, 6Gb RAM, 5G, 6.1", Chip A15 Bionic, OLED Retina XDR - Midnight'
     }
+    
   ];
 
   return (
