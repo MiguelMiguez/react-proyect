@@ -35,7 +35,7 @@ const NavBar = () => {
                         </li>
                         <li className='ListContainer'>
                             <NavLink  to='/cart'> 
-                                <img className='CartBuy' src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="" /> 
+                                <img className='CartBuy' src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="CartBuy" /> 
                             </NavLink>
                         </li>
                     </ul>
