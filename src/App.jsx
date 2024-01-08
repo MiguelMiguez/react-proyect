@@ -14,12 +14,12 @@ function App() {
   };
 
   const clearCart = () => {
-    setCartItems([]); // Vacía el carrito
+    setCartItems([]); 
   };
 
   const removeFromCart = (itemId) => {
     const updatedCart = cartItems.filter((item) => item.id !== itemId);
-    setCartItems(updatedCart); // Elimina un elemento del carrito por su ID
+    setCartItems(updatedCart); 
   };
 
   return (
