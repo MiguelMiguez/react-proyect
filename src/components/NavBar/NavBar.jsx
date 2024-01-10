@@ -8,7 +8,7 @@ import MacPage from '../MacPage/MacPage';
 const NavBar = () => {
   return (
     <div className='NavBar'>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar  fixed-top navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <Link to='/'>
                 <h2 class="navbar-brand" href="#">IphoneZS</h2>
