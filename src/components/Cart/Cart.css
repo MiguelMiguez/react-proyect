@@ -23,8 +23,12 @@
 
 p{
     margin: 1rem;
-    width: 300px;
+    
     height: auto;
+}
+
+.CartInfo{
+    width: 300px;
 }
 
 .RemoveItemButton{

@@ -50,8 +50,8 @@ const Cart = ({ cartItems, clearCart, removeFromCart, updateQuantity }) => {
           {cartItems.map((item) => (
             <div key={item.id} className='CartItem'>
               <img className='ImgItem' src={item.image} alt={item.name} />
-              <p>{item.description}</p>
-              <p>{`$${item.price}`}</p>
+              <p className='CartInfo'>{item.description}</p>
+              <p className='CartInfo'>{`$${item.price}`}</p>
               <div>
                 <button onClick={() => restarContador(item.id)} className='BtnQuantity'>
                   -
