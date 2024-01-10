@@ -6,6 +6,10 @@
     text-align: center;
 }
 
+.CartTitle{
+    margin-top: 5rem ;
+}
+
 .CartItem{
     display: flex;
     flex-direction: row;
