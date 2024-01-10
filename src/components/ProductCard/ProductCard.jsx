@@ -23,3 +23,4 @@ const ProductCard = ({ productData, addToCart }) => {
 };
 
 export default ProductCard;
+ 

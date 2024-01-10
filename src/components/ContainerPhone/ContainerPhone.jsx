@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ProductCard from '../ProductCard/ProductCard';
 import './ContainerPhone.css';
-import { getDocs, collection, query } from 'firebase/firestore';
+import { getDocs, collection } from 'firebase/firestore';
 import { db } from '../../services/config';
 
 const ContainerPhone = ({ addToCart }) => {
@@ -14,6 +14,7 @@ const ContainerPhone = ({ addToCart }) => {
       const productsData = querySnapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
+        quantity: 1, 
       }));
       setProducts(productsData);
     };
@@ -22,7 +23,7 @@ const ContainerPhone = ({ addToCart }) => {
   }, []);
 
   return (
-    <div  className='ContainerPhone'>
+    <div className='ContainerPhone'>
       {products.map((product) => (
         <ProductCard
           key={product.id}
