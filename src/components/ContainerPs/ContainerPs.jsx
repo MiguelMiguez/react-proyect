@@ -1,4 +1,3 @@
-// ContainerPs.js
 import React, { useRef } from 'react';
 import './ContainerPs.css';
 import PrincipalScreen from '../PrincipalScreen/PrincipalScreen';
@@ -17,7 +16,7 @@ const ContainerPs = ({ addToCart }) => {
   return (
     <div className='ContainerPs'>
       <PrincipalScreen scrollToContainer={scrollToContainer} />
-      <ContainerPhone addToCart={addToCart} ref={containerPhoneRef} />
+      <ContainerPhone addToCart={addToCart} forwardedRef={containerPhoneRef} />
       <ContainerMac addToCart={addToCart}/>
     </div>
   );

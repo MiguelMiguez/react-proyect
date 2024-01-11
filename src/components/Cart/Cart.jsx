@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Cart.css';
 
-const Cart = ({ cartItems, clearCart, removeFromCart, updateQuantity }) => {
+const Cart = ({ cartItems, clearCart, removeFromCart, }) => {
   const handleClearCart = () => {
     clearCart();
   };

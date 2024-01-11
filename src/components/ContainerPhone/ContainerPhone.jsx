@@ -4,7 +4,7 @@ import './ContainerPhone.css';
 import { getDocs, collection } from 'firebase/firestore';
 import { db } from '../../services/config';
 
-const ContainerPhone = ({ addToCart }) => {
+const ContainerPhone = ({ addToCart, forwardedRef }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const ContainerPhone = ({ addToCart }) => {
   }, []);
 
   return (
-    <div className='ContainerPhone'>
+    <div className='ContainerPhone' ref={forwardedRef}>
       {products.map((product) => (
         <ProductCard
           key={product.id}
