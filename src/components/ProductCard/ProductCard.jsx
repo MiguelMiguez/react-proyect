@@ -1,4 +1,3 @@
-// ProductCard.js
 import React from 'react';
 import ImageCard from '../ImageCard/ImageCard';
 import DescriptionCard from '../DescriptionCard/DescriptionCard';

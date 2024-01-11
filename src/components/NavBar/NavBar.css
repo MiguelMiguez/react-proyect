@@ -5,22 +5,52 @@
 }
 
 .CartBuy{
-    width: 20px;
-    height: auto;
+    width: 30px;
+    height: 30px;
 }
 
 .ListContainer a{
-    padding: 0.5rem;
+    padding: 0.2rem;
     text-decoration: none;
     color: black;
-    transition: 1s;
+    transition: 0.3s;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
 
 }
 .navbar-nav{
     text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 a:hover{
     color: blue;
+    transform: scale(1.05);
 }
 
+.container-fluid a{
+    text-decoration: none;
+    
+}
+
+.container-fluid h2{
+    font-size: 1.7rem;
+    transition: 0.3s;
+}
+
+.CartNumber{
+    padding: 0.5px 10px 0.5px 10px;
+    border-radius: 100%;
+    background-color: red;
+    color: white;
+}
+
+h2{
+    transition: 0.3s;
+}

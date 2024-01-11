@@ -8,6 +8,7 @@ import ContainerCart from './components/ContainerCart/ContainerCart';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
+  const [cartItemCount, setCartItemCount] = useState(0);
 
   const addToCart = (product) => {
     const existingItemIndex = cartItems.findIndex((item) => item.id === product.id);
@@ -19,15 +20,19 @@ function App() {
     } else {
       setCartItems([...cartItems, { ...product, quantity: 1 }]);
     }
+
+    setCartItemCount((prevCount) => prevCount + 1);
   };
 
   const clearCart = () => {
     setCartItems([]);
+    setCartItemCount(0);
   };
 
   const removeFromCart = (itemId) => {
     const updatedCart = cartItems.filter((item) => item.id !== itemId);
     setCartItems(updatedCart);
+    setCartItemCount((prevCount) => prevCount - 1);
   };
 
   const updateQuantity = (itemId, action) => {
@@ -51,7 +56,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <NavBar />
+        <NavBar cartItemCount={cartItemCount} />
         <Routes>
           <Route path='/' element={<ContainerPs addToCart={addToCart} />} />
           <Route path='/mac' element={<MacPage addToCart={addToCart} />} />
