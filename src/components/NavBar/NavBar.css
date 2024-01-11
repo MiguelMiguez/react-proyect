@@ -30,8 +30,9 @@
 }
 
 a:hover{
-    color: blue;
+    color: #283966;
     transform: scale(1.05);
+    font-weight: 600;
 }
 
 .container-fluid a{
@@ -45,12 +46,12 @@ a:hover{
 }
 
 .CartNumber{
-    padding: 0.5px 10px 0.5px 10px;
+    padding: 0.5px 9px 0.5px 9px;
     border-radius: 100%;
-    background-color: red;
+    background-color: rgb(204, 0, 0);
     color: white;
 }
 
-h2{
+.container-fluid .navbar-brand{
     transition: 0.3s;
 }
