@@ -1,0 +1,34 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(27, 32, 58);
+    color: white;
+}
+
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 1rem;
+    gap: 1rem;
+    
+}
+
+.footer-nav ul li a{
+    text-decoration: none;
+    
+}
+
+.footer-nav ul li{
+    text-decoration: none;
+    
+}

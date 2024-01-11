@@ -5,6 +5,7 @@ import NavBar from './components/NavBar/NavBar';
 import PhonesPage from './components/PhonesPage/PhonesPage';
 import ContainerPs from './components/ContainerPs/ContainerPs';
 import ContainerCart from './components/ContainerCart/ContainerCart';
+import ContainerFooter from './components/ContainerFooter/ContainerFooter';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -74,6 +75,7 @@ function App() {
           />
           <Route path='*' element={<ContainerPs addToCart={addToCart} />} />
         </Routes>
+        <ContainerFooter/>  
       </BrowserRouter>
     </div>
   );
