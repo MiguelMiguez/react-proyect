@@ -12,16 +12,18 @@ Este proyecto fue creado como parte del curso de React con el objetivo de desarr
   - Botón para vaciar el carrito.
   - Eliminación de ítems de forma individual.
   - Selección de la cantidad de productos deseados.
-- [Menciona otras características clave]
 
-## Instalación
+
+
+ ## Instalación
 
 1. Clona este repositorio.
 2. Instala las dependencias utilizando el siguiente comando:
 
-```bash
+``bash
 npm install
 Configuración
+``
 
 Antes de ejecutar la aplicación, configura tu proyecto Firebase:
 
@@ -32,28 +34,26 @@ Ejecución Local
 
 Ejecuta el proyecto localmente con el siguiente comando:
 
-bash
-Copy code
+``bash
 npm start
-Visita http://localhost:3000 en tu navegador.
+``
 
-Tecnologías Utilizadas
+Visita http://localhost:5080 en tu navegador.
+
+## Tecnologías Utilizadas
 
 React
 Node.js
 React+Vite
-Firebase (Firestore, Autenticación, etc.)
-Contribución
+Firebase (Firestore)
+
+## Contribución
 
 ¡Contribuciones son bienvenidas! Si encuentras algún problema o tienes sugerencias, por favor crea un issue.
 
-Licencia
 
-Este proyecto está bajo la Licencia [Nombre de la Licencia]. Consulta el archivo [LICENSE.md] para más detalles.
 
-Copy code
 
-Espero que esto sea útil para tu proyecto. Si necesitas más
 
 
 
