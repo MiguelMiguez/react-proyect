@@ -11,7 +11,8 @@ Este proyecto fue creado como parte del curso de React con el objetivo de desarr
 - Carrito de compras funcional con las siguientes características:
   - Botón para vaciar el carrito.
   - Eliminación de ítems de forma individual.
-  - Selección de la cantidad de productos 
+  - Selección de la cantidad de productos deseados.
+- [Menciona otras características clave]
 
 ## Instalación
 
@@ -20,7 +21,6 @@ Este proyecto fue creado como parte del curso de React con el objetivo de desarr
 
 ```bash
 npm install
-
 Configuración
 
 Antes de ejecutar la aplicación, configura tu proyecto Firebase:
@@ -32,21 +32,28 @@ Ejecución Local
 
 Ejecuta el proyecto localmente con el siguiente comando:
 
+bash
+Copy code
 npm start
-
-Visita http://localhost:5080 en tu navegador.
+Visita http://localhost:3000 en tu navegador.
 
 Tecnologías Utilizadas
 
 React
 Node.js
 React+Vite
-Firebase (Firestore)
+Firebase (Firestore, Autenticación, etc.)
 Contribución
 
 ¡Contribuciones son bienvenidas! Si encuentras algún problema o tienes sugerencias, por favor crea un issue.
 
+Licencia
 
+Este proyecto está bajo la Licencia [Nombre de la Licencia]. Consulta el archivo [LICENSE.md] para más detalles.
+
+Copy code
+
+Espero que esto sea útil para tu proyecto. Si necesitas más
 
 
 
