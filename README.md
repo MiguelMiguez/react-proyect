@@ -20,10 +20,10 @@ Este proyecto fue creado como parte del curso de React con el objetivo de desarr
 1. Clona este repositorio.
 2. Instala las dependencias utilizando el siguiente comando:
 
-``bash
-npm install
-Configuración
 ``
+npm install
+``
+## Configuracion
 
 Antes de ejecutar la aplicación, configura tu proyecto Firebase:
 
