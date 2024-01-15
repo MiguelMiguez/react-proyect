@@ -18,10 +18,10 @@ Este proyecto fue creado como parte del curso de React con el objetivo de desarr
 1. Clona este repositorio.
 2. Instala las dependencias utilizando el siguiente comando:
 
-``bash
+```bash
 npm install
 
-Configuracion
+Configuración
 
 Antes de ejecutar la aplicación, configura tu proyecto Firebase:
 
@@ -41,10 +41,11 @@ Tecnologías Utilizadas
 React
 Node.js
 React+Vite
-Firebase (Firestore, Autenticación, etc.)
+Firebase (Firestore)
 Contribución
 
 ¡Contribuciones son bienvenidas! Si encuentras algún problema o tienes sugerencias, por favor crea un issue.
+
 
 
 
