@@ -34,8 +34,8 @@ Ejecución Local
 
 Ejecuta el proyecto localmente con el siguiente comando:
 
-``bash
-npm start
+``
+npm run dev
 ``
 
 Visita http://localhost:5080 en tu navegador.
