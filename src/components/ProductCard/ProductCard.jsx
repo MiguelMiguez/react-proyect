@@ -20,9 +20,12 @@ const ProductCard = ({ productData, addToCart }) => {
       <ImageCard image={image} />
       <DescriptionCard name={name} description={description} />
       <PriceCard price={price} />
-      <button className='BtnAddCart' onClick={handleAddToCart} disabled={isButtonDisabled}>
-        Add to Cart
-      </button>
+      <div>
+        <button className='BtnAddCart' onClick={handleAddToCart} disabled={isButtonDisabled}>
+          Add to Cart
+        </button>
+        <button className='BtnAddCart'>Ver Producto</button>
+      </div>
     </div>
   );
 };

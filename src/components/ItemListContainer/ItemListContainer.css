@@ -1,0 +1,35 @@
+.ContainerButton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    gap: 3rem;
+}
+
+.OrderButtons{
+
+    padding: 1rem;
+    background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	background-color:#7892c2;
+	border-radius:5px;
+	border-style: 1px white solid;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding: 0.5rem;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+	transition: 1s;
+	
+	
+
+}
+
+.OrderButtons:hover{
+	background: black;
+	color: wheat;
+	transform: scale(1.05);
+}
+

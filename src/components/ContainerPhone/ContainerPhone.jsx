@@ -3,8 +3,11 @@ import ProductCard from '../ProductCard/ProductCard';
 import './ContainerPhone.css';
 import { getDocs, collection } from 'firebase/firestore';
 import { db } from '../../services/config';
+import ItemListContainer from '../ItemListContainer/ItemListContainer';
+import { useMyContext } from '../MyContext/MyContext';
 
 const ContainerPhone = ({ addToCart, forwardedRef }) => {
+  const { sortOrder } = useMyContext();
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -14,23 +17,36 @@ const ContainerPhone = ({ addToCart, forwardedRef }) => {
       const productsData = querySnapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
-        quantity: 1, 
+        quantity: 1,
       }));
-      setProducts(productsData);
+
+      
+      const sortedProducts = sortOrder === 'MenToMay'
+        ? [...productsData].sort((a, b) => a.price - b.price)
+        : sortOrder === 'MayToMen'
+        ? [...productsData].sort((a, b) => b.price - a.price)
+        : productsData;
+
+      setProducts(sortedProducts);
     };
 
     fetchProducts();
-  }, []);
+  }, [sortOrder]);
 
   return (
-    <div className='ContainerPhone' ref={forwardedRef}>
-      {products.map((product) => (
-        <ProductCard
-          key={product.id}
-          productData={product}
-          addToCart={addToCart}
-        />
-      ))}
+    <div>
+      <div className='ContainerAll'>
+        <ItemListContainer />
+      </div>
+      <div className='ContainerPhone' ref={forwardedRef}>
+        {products.map((product) => (
+          <ProductCard
+            key={product.id}
+            productData={product}
+            addToCart={addToCart}
+          />
+        ))}
+      </div>
     </div>
   );
 };

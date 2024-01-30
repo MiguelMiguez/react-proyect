@@ -1,3 +1,4 @@
+// App.js
 import React, { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MacPage from './components/MacPage/MacPage';
@@ -6,6 +7,7 @@ import PhonesPage from './components/PhonesPage/PhonesPage';
 import ContainerPs from './components/ContainerPs/ContainerPs';
 import ContainerCart from './components/ContainerCart/ContainerCart';
 import ContainerFooter from './components/ContainerFooter/ContainerFooter';
+import { MyProvider } from './components/MyContext/MyContext';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -57,25 +59,27 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <NavBar cartItemCount={cartItemCount} />
-        <Routes>
-          <Route path='/' element={<ContainerPs addToCart={addToCart} />} />
-          <Route path='/mac' element={<MacPage addToCart={addToCart} />} />
-          <Route path='/phones' element={<PhonesPage addToCart={addToCart} />} />
-          <Route
-            path='/cart'
-            element={
-              <ContainerCart
-                cartItems={cartItems}
-                clearCart={clearCart}
-                removeFromCart={removeFromCart}
-                updateQuantity={updateQuantity}
-              />
-            }
-          />
-          <Route path='*' element={<ContainerPs addToCart={addToCart} />} />
-        </Routes>
-        <ContainerFooter/>  
+        <MyProvider>
+          <NavBar cartItemCount={cartItemCount} />
+          <Routes>
+            <Route path='/' element={<ContainerPs addToCart={addToCart} />} />
+            <Route path='/mac' element={<MacPage addToCart={addToCart} />} />
+            <Route path='/phones' element={<PhonesPage addToCart={addToCart} />} />
+            <Route
+              path='/cart'
+              element={
+                <ContainerCart
+                  cartItems={cartItems}
+                  clearCart={clearCart}
+                  removeFromCart={removeFromCart}
+                  updateQuantity={updateQuantity}
+                />
+              }
+            />
+            <Route path='*' element={<ContainerPs addToCart={addToCart} />} />
+          </Routes>
+          <ContainerFooter />
+        </MyProvider>
       </BrowserRouter>
     </div>
   );

@@ -6,3 +6,21 @@
     justify-items: center;
     
 }
+
+.ContainerAll{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin: 2rem;
+	
+}
+
+.ContainerButton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    gap: 3rem;
+}
+
