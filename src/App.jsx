@@ -7,6 +7,7 @@ import PhonesPage from './components/PhonesPage/PhonesPage';
 import ContainerPs from './components/ContainerPs/ContainerPs';
 import ContainerCart from './components/ContainerCart/ContainerCart';
 import ContainerFooter from './components/ContainerFooter/ContainerFooter';
+import ItemDetail from './components/ItemDetail/ItemDetail'; // Importa el componente ItemDetail
 import { MyProvider } from './components/MyContext/MyContext';
 
 function App() {
@@ -76,6 +77,7 @@ function App() {
                 />
               }
             />
+            <Route path='/item-detail' element={<ItemDetail />} /> {/* Nueva ruta para ItemDetail */}
             <Route path='*' element={<ContainerPs addToCart={addToCart} />} />
           </Routes>
           <ContainerFooter />
