@@ -1,4 +1,6 @@
+// MyContext.js
 import { createContext, useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const MyContext = createContext();
 
@@ -7,6 +9,8 @@ export const MyProvider = ({ children }) => {
   const [sortOrder, setSortOrder] = useState(null);
   const [cartItems, setCartItems] = useState([]);
   const [cartItemCount, setCartItemCount] = useState(0);
+  const [productInfo, setProductInfo] = useState(null);
+  const navigate = useNavigate();
 
   const addToCart = (product) => {
     const existingItemIndex = cartItems.findIndex((item) => item.id === product.id);
@@ -37,6 +41,31 @@ export const MyProvider = ({ children }) => {
     setSelectedCategory(category);
   };
 
+  const sumarContador = (itemId) => {
+    const updatedCartItems = cartItems.map((item) => {
+      if (item.id === itemId) {
+        item.quantity += 1;
+      }
+      return item;
+    });
+    setCartItems(updatedCartItems);
+  };
+
+  const restarContador = (itemId) => {
+    const updatedCartItems = cartItems.map((item) => {
+      if (item.id === itemId && item.quantity > 1) {
+        item.quantity -= 1;
+      }
+      return item;
+    });
+    setCartItems(updatedCartItems);
+  };
+
+  const setProduct = (product) => {
+    setProductInfo(product);
+    navigate(`/product/${product.category}/${product.id}`);
+  };
+
   return (
     <MyContext.Provider
       value={{
@@ -51,6 +80,11 @@ export const MyProvider = ({ children }) => {
         addToCart,
         clearCart,
         removeFromCart,
+        sumarContador,
+        restarContador,
+        productInfo,
+        setProduct,
+        navigate,
       }}
     >
       {children}

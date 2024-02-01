@@ -1,3 +1,4 @@
+// App.jsx
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MacPage from './components/MacPage/MacPage';
@@ -6,8 +7,8 @@ import PhonesPage from './components/PhonesPage/PhonesPage';
 import ContainerPs from './components/ContainerPs/ContainerPs';
 import ContainerCart from './components/ContainerCart/ContainerCart';
 import ContainerFooter from './components/ContainerFooter/ContainerFooter';
-import ItemDetail from './components/ItemDetail/ItemDetail';
 import { MyProvider } from './components/MyContext/MyContext';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function AppContent() {
         <Route path='/mac' element={<MacPage />} />
         <Route path='/phones' element={<PhonesPage />} />
         <Route path='/cart' element={<ContainerCart />} />
-        <Route path='/item-detail' element={<ItemDetail />} />
+        <Route path="/product/:collection/:productId" element={<ItemDetailContainer />} />
         <Route path='*' element={<ContainerPs />} />
       </Routes>
       <ContainerFooter />

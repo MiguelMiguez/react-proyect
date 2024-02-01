@@ -7,7 +7,7 @@ const ItemListContainer = () => {
   const { setSortOrder, selectedCategory } = useMyContext();
 
   const handleSortChange = (order) => {
-    console.log('Order clicked:', order); // Agrega este console.log
+    console.log('Order clicked:', order); 
     setSortOrder(order);
   };
 

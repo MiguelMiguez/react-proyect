@@ -4,12 +4,15 @@ import { useNavigate } from 'react-router-dom';
 import ImageCard from '../ImageCard/ImageCard';
 import DescriptionCard from '../DescriptionCard/DescriptionCard';
 import PriceCard from '../PriceCard/PriceCard';
+import { useMyContext } from '../MyContext/MyContext';
 import './ProductCard.css';
 
-const ProductCard = ({ productData, addToCart }) => {
-  const { image, name, price, description } = productData;
+const ProductCard = ({ productData }) => {
+  const { addToCart, setProduct } = useMyContext();
+  const { image, name, price, description, category, id } = productData;
   const [isButtonDisabled, setButtonDisabled] = useState(false);
   const navigate = useNavigate();
+  
 
   const handleAddToCart = () => {
     if (!isButtonDisabled) {
@@ -19,8 +22,10 @@ const ProductCard = ({ productData, addToCart }) => {
   };
 
   const handleVerProducto = () => {
-    navigate('/item-detail');
+    setProduct(productData);
+    navigate(`/product/${productData.category}/${id}`);
   };
+
 
   return (
     <div className='ProductCard'>

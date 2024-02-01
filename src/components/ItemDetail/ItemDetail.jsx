@@ -1,20 +1,23 @@
-import React from 'react'
+import React from 'react';
 
-const ItemDetail = () => {
+const ItemDetail = ({ product }) => {
+  // Asegúrate de establecer un valor predeterminado para product si es undefined
+  const { image, name, price, description } = product || {};
+
   return (
     <div className='ItemDetail'>
-      <div className='ImgInfoProduct'>
-        <img src="" alt="" />
-      </div>
-      <div>
-        <h2></h2>
-        <p></p>
-        <p></p>
-        <p>✅En Stock</p>
-        <button>COMPRAR</button>
-      </div>
+      {product ? (
+        <>
+          <img src={image} alt={name} />
+          <h2>{name}</h2>
+          <p>{description}</p>
+          <p>Precio: ${price}</p>
+        </>
+      ) : (
+        <p>El producto no se ha cargado aún.</p>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default ItemDetail
+export default ItemDetail;
