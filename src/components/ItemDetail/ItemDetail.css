@@ -1,0 +1,59 @@
+.ItemDetail{
+    display: flex;
+    flex-direction: row;
+    padding: 7rem 0rem 2rem 0rem;
+    
+
+    
+}
+
+.DetailProduct{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    margin: 2rem;
+    gap: 2rem;
+}
+
+.TittleProduct{
+
+    font-size: 3rem;
+
+}
+
+.InfoProduct{
+    font-size: 1.2rem;
+}
+
+.InfoProduct2{
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.ImgDetail{
+    width: 800px;
+    height: auto;
+}
+
+.ImgProduct{
+    width: 600px;
+    height: auto;
+}
+
+.InfoProduct{
+    margin: 0;
+}
+
+.ButtonProduct{
+    width: 400px;
+    padding: 1rem;
+    font-size: 1.5rem;
+    transition: 0.4s;
+}
+
+.ButtonProduct:hover{
+    background-color: black;
+    color: white;
+}

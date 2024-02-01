@@ -1,17 +1,44 @@
-import React from 'react';
+// ItemDetail.jsx
+import React, { useState } from 'react';
+import { useMyContext } from '../MyContext/MyContext';
+import './ItemDetail.css';
 
 const ItemDetail = ({ product }) => {
-  // Asegúrate de establecer un valor predeterminado para product si es undefined
-  const { image, name, price, description } = product || {};
+  const { image, name, price, description, info } = product || {};
+  const { addToCart } = useMyContext();
+  const [quantity, setQuantity] = useState(1);
+  const [buttonClicked, setButtonClicked] = useState(false);
+
+  const handleAddToCart = () => {
+    addToCart({ ...product, quantity });
+    setButtonClicked(true);
+    // Puedes reiniciar la cantidad a 1 después de agregar al carrito
+    setQuantity(1);
+  };
 
   return (
     <div className='ItemDetail'>
       {product ? (
         <>
-          <img src={image} alt={name} />
-          <h2>{name}</h2>
-          <p>{description}</p>
-          <p>Precio: ${price}</p>
+          <div className='ImgDetail'>
+            <img className='ImgProduct' src={image} alt={name} />
+          </div>
+          <div className='DetailProduct'>
+            <h2 className='TittleProduct'>{name}</h2>
+            <p className='InfoProduct'>{description}</p>
+            <p className='InfoProduct2'>U$D {price}</p>
+            <p className='InfoProduct'>✅En Stock</p>
+            <div>
+              <button
+                className='ButtonProduct'
+                onClick={handleAddToCart}
+                disabled={buttonClicked}
+              >
+                {buttonClicked ? 'Agregado al Carrito' : 'Agregar al Carrito'}
+              </button>
+            </div>
+            <p>{info}</p>
+          </div>
         </>
       ) : (
         <p>El producto no se ha cargado aún.</p>

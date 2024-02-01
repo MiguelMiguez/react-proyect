@@ -5,6 +5,7 @@ footer{
     align-items: center;
     background-color: rgb(27, 32, 58);
     color: white;
+    bottom: 0;
 }
 
 .contact-info{
