@@ -4,12 +4,11 @@ import ProductCard from '../ProductCard/ProductCard';
 import './ContainerMac.css';
 import { useMyContext } from '../MyContext/MyContext';
 import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../../services/config'; 
+import { db } from '../../services/config';
 import ItemListContainer from '../ItemListContainer/ItemListContainer';
 
-const ContainerMac = ({ addToCart }) => {
-  const { selectedCategory, sortOrder } = useMyContext();
-
+const ContainerMac = () => {
+  const { setCategory, selectedCategory, sortOrder, addToCart } = useMyContext();
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -42,9 +41,9 @@ const ContainerMac = ({ addToCart }) => {
   }, [selectedCategory, sortOrder]);
 
   return (
-    <div> 
+    <div>
       <div className='ContainerAll'>
-        <ItemListContainer/>
+        <ItemListContainer />
       </div>
       <div className='ContainerMac'>
         {products.map((product) => (

@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './NavBar.css';
+import { useMyContext } from '../MyContext/MyContext';
 
-const NavBar = ({ cartItemCount }) => {
+const NavBar = () => {
+  const { cartItemCount } = useMyContext();
+
   return (
     <div className='NavBar'>
       <nav className="navbar  fixed-top navbar-expand-lg bg-body-tertiary">

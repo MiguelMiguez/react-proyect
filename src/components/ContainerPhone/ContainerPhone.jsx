@@ -6,8 +6,8 @@ import { db } from '../../services/config';
 import ItemListContainer from '../ItemListContainer/ItemListContainer';
 import { useMyContext } from '../MyContext/MyContext';
 
-const ContainerPhone = ({ addToCart, forwardedRef }) => {
-  const { sortOrder } = useMyContext();
+const ContainerPhone = ({ forwardedRef }) => {
+  const { sortOrder, addToCart } = useMyContext();
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -20,7 +20,6 @@ const ContainerPhone = ({ addToCart, forwardedRef }) => {
         quantity: 1,
       }));
 
-      
       const sortedProducts = sortOrder === 'MenToMay'
         ? [...productsData].sort((a, b) => a.price - b.price)
         : sortOrder === 'MayToMen'

@@ -1,4 +1,4 @@
-// ProductCard.js
+// ProductCard.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ImageCard from '../ImageCard/ImageCard';
@@ -19,7 +19,6 @@ const ProductCard = ({ productData, addToCart }) => {
   };
 
   const handleVerProducto = () => {
-    
     navigate('/item-detail');
   };
 

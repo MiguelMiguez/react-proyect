@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Cart.css';
 
-const Cart = ({ cartItems, clearCart, removeFromCart, }) => {
+const Cart = ({ cartItems, clearCart, removeFromCart, sumarContador, restarContador }) => {
   const handleClearCart = () => {
     clearCart();
   };
@@ -17,14 +17,16 @@ const Cart = ({ cartItems, clearCart, removeFromCart, }) => {
     }, {})
   );
 
-  const sumarContador = (itemId) => {
+  const sumarContadorLocal = (itemId) => {
+    sumarContador(itemId);
     setCounters({
       ...counters,
       [itemId]: counters[itemId] + 1,
     });
   };
 
-  const restarContador = (itemId) => {
+  const restarContadorLocal = (itemId) => {
+    restarContador(itemId);
     if (counters[itemId] > 1) {
       setCounters({
         ...counters,
@@ -32,6 +34,15 @@ const Cart = ({ cartItems, clearCart, removeFromCart, }) => {
       });
     }
   };
+
+  useEffect(() => {
+    setCounters(
+      cartItems.reduce((acc, item) => {
+        acc[item.id] = counters[item.id] || 1;
+        return acc;
+      }, {})
+    );
+  }, [cartItems]);
 
   return (
     <div className='Cart'>
@@ -53,11 +64,11 @@ const Cart = ({ cartItems, clearCart, removeFromCart, }) => {
               <p className='CartInfo'>{item.description}</p>
               <p className='CartInfo'>{`$${item.price}`}</p>
               <div>
-                <button onClick={() => restarContador(item.id)} className='BtnQuantity'>
+                <button onClick={() => restarContadorLocal(item.id)} className='BtnQuantity'>
                   -
                 </button>
                 <p>{counters[item.id]}</p>
-                <button onClick={() => sumarContador(item.id)} className='BtnQuantity'>
+                <button onClick={() => sumarContadorLocal(item.id)} className='BtnQuantity'>
                   +
                 </button>
               </div>
