@@ -1,4 +1,3 @@
-// ItemDetail.jsx
 import React, { useState } from 'react';
 import { useMyContext } from '../MyContext/MyContext';
 import './ItemDetail.css';
@@ -12,7 +11,6 @@ const ItemDetail = ({ product }) => {
   const handleAddToCart = () => {
     addToCart({ ...product, quantity });
     setButtonClicked(true);
-    // Puedes reiniciar la cantidad a 1 después de agregar al carrito
     setQuantity(1);
   };
 
