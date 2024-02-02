@@ -42,19 +42,25 @@ p{
 
 .ClearCartButton{
     padding: 1rem;
-    background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
-	background-color:#7892c2;
-	border-radius:28px;
+	background-color:black;
+	border-radius:5px;
 	border-style: 1px white solid;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Arial;
 	font-size:17px;
 	padding:16px 31px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #283966;
+    color: rgb(255, 255, 255);
+    transition: 1s;
     
+}
+
+.ClearCartButton:hover{
+    transform: scale(20px);
+    color: black;
+    background-color: white;
 }
 
 .BtnQuantity{
@@ -66,4 +72,56 @@ p{
     border-radius: 5px;
     border-style: 1px white solid;
 
+}
+
+.FormBuy{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    justify-items: start;
+    align-items: center;
+}
+
+.InputForm{
+    display: flex ;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+.CartButton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.InputForm label {
+    width: 150px; 
+    margin-bottom: 5px; 
+  }
+
+.OrderBtn{
+    margin: 1rem;
+    padding: 1rem;
+	background-color:black;
+	border-radius:5px;
+	border-style: 1px white solid;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+    color: rgb(255, 255, 255);
+    transition: 1s;
+
+} 
+
+.OrderBtn:hover{
+    transform: scale(20px);
+    color: black;
+    background-color: white;
 }

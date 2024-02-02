@@ -117,7 +117,7 @@ const Cart = ({ cartItems, clearCart, removeFromCart, sumarContador, restarConta
 
   return (
     <div className='Cart'>
-      <div>
+      <div className='CartButton'>
         <h2 className='CartTitle'>Tu carrito</h2>
         <button onClick={handleClearCart} className='ClearCartButton'>
           Vaciar Carrito
@@ -152,33 +152,37 @@ const Cart = ({ cartItems, clearCart, removeFromCart, sumarContador, restarConta
         </div>
       )}
 
-      <div className='FormBuy'>
+      <div >
         <form onSubmit={manejadorSubmit}>
-          <div>
-            <label htmlFor=""> Nombre </label>
-            <input type="text" onChange={(e) => setNombre(e.target.value)} />
+          <div className='FormBuy'>
+              <div className='InputForm'>
+                <label htmlFor=""> Nombre </label>
+                <input type="text" onChange={(e) => setNombre(e.target.value)} />
+              </div>
+              <div className='InputForm'>
+                <label htmlFor=""> Apellido </label>
+                <input type="text" onChange={(e) => setApellido(e.target.value)} />
+              </div>
+              <div className='InputForm'>
+                <label htmlFor=""> Telefono </label>
+                <input type="text" onChange={(e) => setTelefono(e.target.value)} />
+              </div>
+              <div className='InputForm'>
+                <label htmlFor=""> Email </label>
+                <input type="email" onChange={(e) => setEmail(e.target.value)} />
+              </div>
+              <div className='InputForm'>
+                <label htmlFor=""> Email Confirmación </label>
+                <input type="email" onChange={(e) => setEmailConfirmacion(e.target.value)} />
+              </div>
           </div>
           <div>
-            <label htmlFor=""> Apellido </label>
-            <input type="text" onChange={(e) => setApellido(e.target.value)} />
+            {error && <p style={{ color: "red" }}> {error} </p>}
+            <button className='OrderBtn' type="submit"> Finalizar Orden </button>
+            {ordenId && (
+              <strong>¡Gracias por su compra! Tu número de orden es: {ordenId} </strong>
+            )}
           </div>
-          <div>
-            <label htmlFor=""> Telefono </label>
-            <input type="text" onChange={(e) => setTelefono(e.target.value)} />
-          </div>
-          <div>
-            <label htmlFor=""> Email </label>
-            <input type="email" onChange={(e) => setEmail(e.target.value)} />
-          </div>
-          <div>
-            <label htmlFor=""> Email Confirmación </label>
-            <input type="email" onChange={(e) => setEmailConfirmacion(e.target.value)} />
-          </div>
-          {error && <p style={{ color: "red" }}> {error} </p>}
-          <button type="submit"> Finalizar Orden </button>
-          {ordenId && (
-            <strong>¡Gracias por su compra! Tu número de orden es: {ordenId} </strong>
-          )}
         </form>
       </div>
     </div>
