@@ -122,11 +122,11 @@ const Cart = ({ cartItems, clearCart, removeFromCart, sumarContador, restarConta
         <button onClick={handleClearCart} className='ClearCartButton'>
           Vaciar Carrito
         </button>
-        <p>Valor total del carrito: ${tuVariableDeTotal}</p>
+        <p className='ValueProduct'>Valor total del carrito: ${tuVariableDeTotal}</p>
       </div>
       {cartItems.length === 0 ? (
         <div>
-          <p>El carrito está vacío 😞</p>
+          <p className='ValueProduct'>El carrito está vacío 😞</p>
         </div>
       ) : (
         <div className='CartItems'>
